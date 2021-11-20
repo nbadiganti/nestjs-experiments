@@ -35,15 +35,17 @@ $ npm run test:cov
 ```
 
 ## API GET request example 
-
+```bash
 @Get()
 findAll(@Req() request: Request, @Res() response): string {
     console.log(request);
     return response.status(200).send('Total users list');
 }
+```
 
 ## API Post request example 
 
+```bash
 @Post('/create')
 @HttpCode(200)
 createUser(@Req() request, @Res() response) {
@@ -53,6 +55,7 @@ createUser(@Req() request, @Res() response) {
     }
     else return "User created successfully!"
 }
+```
 
 ## Stay in touch
 
