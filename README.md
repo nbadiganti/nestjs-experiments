@@ -57,6 +57,19 @@ createUser(@Req() request, @Res() response) {
 }
 ```
 
+## Add mongo db database connection
+Add the MogooseModule in app.module.ts imports 
+```bash
+imports: [ MongooseModule.forRoot('mongodb://localhost:27017'), UsersModule ]
+```
+
+## Add db schema for the app to perform CRUD operations 
+
+```bash 
+MongooseModule.forFeature([ { name: Movies.name, schema: MoviesSchema } ])
+```
+Refer users.module.ts file for more information to link with service and controller for the APIs
+
 ## Stay in touch
 
 - Author - [Nagendra Badiganti](https://www.linkedin.com/in/nagendra-badiganti/)
